@@ -110,7 +110,6 @@ class AVL(object):
             self.tranverseSort(node.rightChild)
 
     def removeNode(self, data, node):
-        # ~ TODO: Corregir error al eliminar nodo cuando se calcula el height
         if not node:
             return node
 
@@ -122,7 +121,7 @@ class AVL(object):
             if not node.leftChild and not node.rightChild:
                 print("Removing a leaf node...")
                 del node
-                return Node
+                return None
             if not node.leftChild:
                 print("Removing a node with a rightChild")
                 temp_node = node.rightChild
